@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/sinedied/semantic-release-node-prep/compare/1.0.0...1.0.1) (2021-09-01)
+
 # 1.0.0 (2021-09-01)
 
 
