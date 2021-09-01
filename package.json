@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-node-prep",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Shareable configuration for automated node package versioning with changelog generation using semantic-release, tailored for OSS projects",
   "repository": "sinedied/semantic-release-node-prep",
   "homepage": "https://github.com/sinedied/semantic-release-node-prep",
