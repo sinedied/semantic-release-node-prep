@@ -1,11 +1,11 @@
-# :robot: semantic-release-npm-github
+# :robot: semantic-release-node-prep
 
-[![NPM version](https://img.shields.io/npm/v/semantic-release-npm-github.svg)](https://www.npmjs.com/package/semantic-release-npm-github)
-[![Build Status](https://github.com/sinedied/semantic-release-npm-github/workflows/release/badge.svg)](https://github.com/sinedied/semantic-release-npm-github/actions)
+[![NPM version](https://img.shields.io/npm/v/semantic-release-node-prep.svg)](https://www.npmjs.com/package/semantic-release-node-prep)
+[![Build Status](https://github.com/sinedied/semantic-release-node-prep/workflows/release/badge.svg)](https://github.com/sinedied/semantic-release-node-prep/actions)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-> Shareable configuration automated package publication to NPM and GitHub using [semantic-release](https://github.com/semantic-release/semantic-release), tailored for OSS projects.
+> Shareable configuration for automated node package versioning with changelog generation using [semantic-release](https://github.com/semantic-release/semantic-release), tailored for OSS projects.
 
 ## Release workflow
 
@@ -14,9 +14,7 @@
   * Includes `chore`, `docs`, `refactor` and `style` changes in PATCH releases
 - Generates or updates [changelog](https://github.com/semantic-release/changelog)
 - Bumps the version in `package.json`
-- Publishes package to [NPM](https://npmjs.org)
 - Commits the changes made and creates a [git tag](https://github.com/semantic-release/git) with the release version
-- Creates a [GitHub release](https://github.com/semantic-release/github) with the package
 
 ## Install
 
@@ -29,14 +27,14 @@
 2. Install this package:
 
   ```sh
-  npm install --save-dev semantic-release-npm-github
+  npm install --save-dev semantic-release-node-prep
   ```
 
 3. Add a semantic release config in your `package.json` file:
 
   ```json
   {
-    "extends": "semantic-release-npm-github",
+    "extends": "semantic-release-node-prep",
     "branch": "main"
   }
   ```
@@ -93,10 +91,7 @@ jobs:
         if: success()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 ```
-
-In addition, for this workflow to work correctly you have to generate an [NPM authentication token](https://docs.npmjs.com/cli/token) and set it to the [`NPM_TOKEN` secret](https://docs.github.com/actions/reference/encrypted-secrets) in your GitHub repository.
 
 ### Note on GitHub protected branches
 
@@ -121,10 +116,13 @@ Finally, make these two changes to your workflow:
       env:
         # Change the secret used here
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         # Add this to set the new commiter for the release
         GIT_COMMITTER_NAME: admin-or-owner
         GIT_COMMITTER_EMAIL: associated-email@address.com
 ```
 
 > Note: GitHub secrets not shared with forks and pull requests, so no one that doesn't have write access to your repo can use of them.
+
+## Related
+
+If you're looking for a way to automate the release of a Node.js package to NPM and GitHub, check out [semantic-release-npm-github](https://github.com/sinedied/semantic-release-npm-github).
