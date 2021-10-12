@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/sinedied/semantic-release-node-prep/compare/1.0.1...2.0.0) (2021-10-12)
+
+
+### Features
+
+* update packages ([57e4c59](https://github.com/sinedied/semantic-release-node-prep/commit/57e4c593efadb42cdbb85d1cc29eb50dfda68596))
+
+
+### BREAKING CHANGES
+
+* require semantic-release >=18
+
 ## [1.0.1](https://github.com/sinedied/semantic-release-node-prep/compare/1.0.0...1.0.1) (2021-09-01)
 
 # 1.0.0 (2021-09-01)
