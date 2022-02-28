@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/sinedied/semantic-release-node-prep/compare/2.0.0...3.0.0) (2022-02-28)
+
+
+### Features
+
+* update deps ([4b2acba](https://github.com/sinedied/semantic-release-node-prep/commit/4b2acba6bbbf36770721e9058fe2ed9038d5621e))
+
+
+### BREAKING CHANGES
+
+* requires semantic-release >= 19
+
 # [2.0.0](https://github.com/sinedied/semantic-release-node-prep/compare/1.0.1...2.0.0) (2021-10-12)
 
 
