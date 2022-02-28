@@ -30,7 +30,6 @@ jobs:
           node-version: '>=14'
       - run: |
           npm ci
-          npm build --if-present
         env:
           CI: true
       - run: npx semantic-release -b main -e semantic-release-npm-github
